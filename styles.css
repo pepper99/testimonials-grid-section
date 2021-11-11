@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background: #ecf2f8;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  font-family: "Barlow Semi Condensed";
+}
+
+.item1 {
+  background: #7541c8;
+  color: white;
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 700px) {
+  .item1 {
+    grid-column: span 1;
+  }
+}
+
+.item2 {
+  background: #48556a;
+  color: white;
+}
+
+.item3 {
+  background: #cfcfcf;
+  color: black;
+  grid-row: span 2;
+}
+
+.item4 {
+  background: white;
+  color: black;
+}
+
+.item5 {
+  background: #19212e;
+  color: white;
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 700px) {
+  .item5 {
+    grid-column: span 1;
+  }
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  width: 80%;
+  height: 80%;
+  gap: 2rem;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 700px) {
+  .grid-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.grid-container .grid-item {
+  border-radius: 0.5rem;
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 1em 2em 3em rgba(56, 56, 56, 0.164);
+          box-shadow: 1em 2em 3em rgba(56, 56, 56, 0.164);
+}
+
+.grid-container .grid-item .author {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid-container .grid-item .author img {
+  border-radius: 50%;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  width: 40px;
+  height: 40px;
+}
+
+.grid-container .grid-item .author .author-title {
+  margin-left: 1em;
+}
+
+.grid-container .grid-item .author .author-title > * {
+  margin: 0;
+}
+
+.grid-container .grid-item .headline {
+  font-size: 24px;
+}
+
+.grid-container .grid-item .description {
+  font-size: 13px;
+}
+
+.grid-container .grid-item p {
+  margin: 1em 0 0 0;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
+/*# sourceMappingURL=styles.css.map */
