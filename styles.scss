@@ -34,11 +34,18 @@ body {
     gap: 2rem;
     margin: 2rem 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "item1 item1 item2 item3"
+                         "item4 item5 item5 item3";
     justify-content: center;
     justify-items: center;
 
     @media screen and (max-width:$mobile-width) {
         grid-template-columns: 1fr;
+        grid-template-areas: "item1"
+                             "item2"
+                             "item4"
+                             "item5"
+                             "item3";
         width: 90%;
         margin: 3rem 0;
     }
@@ -110,6 +117,7 @@ body {
 }
 
 .item1 {
+    grid-area: item1;
     background: $moderateviolet;
     color: white;
     grid-column: span 2;
@@ -139,6 +147,7 @@ body {
 }
 
 .item2 {
+    grid-area: item2;
     background: $verydarkgrayishblue;
     color: white;
     
@@ -157,6 +166,7 @@ body {
 }
 
 .item3 {
+    grid-area: item3;
     background: white;
     color: black;
     grid-row: span 2;
@@ -176,6 +186,7 @@ body {
 }
 
 .item4 {
+    grid-area: item4;
     background: white;
     color: black;
     
@@ -194,6 +205,7 @@ body {
 }
 
 .item5 {
+    grid-area: item5;
     background: $verydarkblackishblue;
     color: white;
     grid-column: span 2;
