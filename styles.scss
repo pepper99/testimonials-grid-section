@@ -31,6 +31,8 @@ body {
 }
 
 .grid-container {
+    position: relative;
+    z-index: 1;
     display: grid;
     width: 70%;
     gap: 2rem;
@@ -267,7 +269,7 @@ body {
 }
 
 .attribution {
-    z-index: -1;
+    z-index: 0;
     position: fixed;
     bottom: 0%;
 }
