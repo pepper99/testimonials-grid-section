@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 
+$lightviolet: hsl(263, 36%, 71%);
 $moderateviolet: hsl(263, 55%, 52%);
 $verydarkgrayishblue: hsl(217, 19%, 35%);
 $verydarkblackishblue: hsl(219, 29%, 14%);
@@ -15,7 +16,8 @@ html {
 
 body {
     background: $lightgrayishblue;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -24,66 +26,24 @@ body {
     font-family: "Barlow Semi Condensed";
 }
 
-.item1 {
-    background: $moderateviolet;
-    color: white;
-    grid-column: span 2;
-    
-    @media screen and (max-width:700px) {
-        grid-column: span 1;
-    }
-}
-
-.item2 {
-    background: $verydarkgrayishblue;
-    color: white;
-    
-    @media screen and (max-width:700px) {
-        
-    }
-}
-
-.item3 {
-    background: $lightgray;
-    color: black;
-    grid-row: span 2;
-    
-    @media screen and (max-width:700px) {
-        
-    }
-}
-
-.item4 {
-    background: white;
-    color: black;
-    
-    @media screen and (max-width:700px) {
-        
-    }
-}
-
-.item5 {
-    background: $verydarkblackishblue;
-    color: white;
-    grid-column: span 2;
-    
-    @media screen and (max-width:700px) {
-        grid-column: span 1;
-    }
-}
-
 .grid-container {
     display: grid;
-    width: 80%;
+    width: 70%;
     height: 80%;
     gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
 
     @media screen and (max-width:700px) {
         grid-template-columns: 1fr;
+        width: 90%;
+        height: max-content;
+        padding: 4rem 0rem;
     }
 
     .grid-item {
+        position: relative;
         border-radius: 0.5rem;
         padding: 2em;
         width: 100%;
@@ -97,7 +57,6 @@ body {
 
             img {
                 border-radius: 50%;
-                border-color: white;
                 border-width: 2px;
                 border-style: solid;
                 width: 40px;
@@ -111,23 +70,136 @@ body {
                     margin: 0;
                 }
             }
+
+            h4 {
+                font-weight: 500;
+            }
+            h5 {
+                font-weight: 600;
+            }
         }
 
         .headline {
+            font-weight: 600;
             font-size: 24px;
         }
 
         .description {
-            font-size: 13px;
+            font-weight: 500;
+            font-size: 16px;
         }
 
         p {
-            margin: 1em 0 0 0;
+            margin: 0.8em 0 0 0;
+        }
+    }
+}
+
+.item1 {
+    background: $moderateviolet;
+    color: white;
+    grid-column: span 2;
+    
+    @media screen and (max-width:700px) {
+        grid-column: span 1;
+    }
+
+    .author {
+        img {
+            border-color: $lightviolet;
+        }
+
+        .author-title {
+            h4 {
+                color: hsl(270, 6%, 87%);
+            }
+            h5 {
+                color: $lightviolet;
+            }
+        }
+    }
+
+    .description {
+        color: $lightviolet;
+    }
+}
+
+.item2 {
+    background: $verydarkgrayishblue;
+    color: white;
+    
+    @media screen and (max-width:700px) {
+        
+    }
+
+    .author .author-title {
+        h4 {
+            color: hsl(0, 0%, 95%);
+        }
+        h5 {
+            color: hsl(220, 9%, 67%);
+        }
+    }
+}
+
+.item3 {
+    background: white;
+    color: black;
+    grid-row: span 2;
+    
+    @media screen and (max-width:700px) {
+        
+    }
+
+    .author .author-title {
+        h4 {
+            color: $verydarkgrayishblue;
+        }
+        h5 {
+            color: hsl(220, 9%, 67%);
+        }
+    }
+}
+
+.item4 {
+    background: white;
+    color: black;
+    
+    @media screen and (max-width:700px) {
+        
+    }
+
+    .author .author-title {
+        h4 {
+            color: $verydarkgrayishblue;
+        }
+        h5 {
+            color: hsl(220, 9%, 67%);
+        }
+    }
+}
+
+.item5 {
+    background: $verydarkblackishblue;
+    color: white;
+    grid-column: span 2;
+    
+    @media screen and (max-width:700px) {
+        grid-column: span 1;
+    }
+
+    .author .author-title {
+        h4 {
+            color: white;
+        }
+        h5 {
+            color: hsl(220, 9%, 67%);
         }
     }
 }
 
 .attribution {
-    position: absolute;
-    bottom: 0;
+    z-index: -1;
+    position: fixed;
+    bottom: 0%;
 }
