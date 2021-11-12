@@ -5,6 +5,8 @@ $moderateviolet: hsl(263, 55%, 52%);
 $verydarkgrayishblue: hsl(217, 19%, 35%);
 $verydarkblackishblue: hsl(219, 29%, 14%);
 $lightgray: hsl(0, 0%, 81%);
+$darkgray: hsl(220, 9%, 67%);
+$darkergray: hsl(218, 5%, 52%);
 $lightgrayishblue: hsl(210, 46%, 95%);
 
 $mobile-width: 700px;
@@ -20,7 +22,7 @@ body {
     background: $lightgrayishblue;
     height: 100%;
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +55,7 @@ body {
     .grid-item {
         position: relative;
         border-radius: 0.5rem;
-        padding: 2em;
+        padding: 1em 2em;
         height: 100%;
         box-shadow: 1em 2em 3em rgba(56, 56, 56, 0.164);
 
@@ -155,13 +157,23 @@ body {
         
     }
 
-    .author .author-title {
-        h4 {
-            color: hsl(0, 0%, 95%);
+    .author {
+        img {
+            border-color: white;
         }
-        h5 {
-            color: hsl(220, 9%, 67%);
+
+        .author-title {
+            h4 {
+                color: hsl(0, 0%, 95%);
+            }
+            h5 {
+                color: $darkgray;
+            }
         }
+    }
+
+    .description {
+        color: $darkgray;
     }
 }
 
@@ -175,13 +187,23 @@ body {
         
     }
 
-    .author .author-title {
-        h4 {
-            color: $verydarkgrayishblue;
+    .author {
+        img {
+            border-color: white;
         }
-        h5 {
-            color: hsl(220, 9%, 67%);
+
+        .author-title {
+            h4 {
+                color: $verydarkgrayishblue;
+            }
+            h5 {
+                color: $darkgray;
+            }
         }
+    }
+
+    .description {
+        color: $darkergray;
     }
 }
 
@@ -194,13 +216,23 @@ body {
         
     }
 
-    .author .author-title {
-        h4 {
-            color: $verydarkgrayishblue;
+    .author {
+        img {
+            border-color: white;
         }
-        h5 {
-            color: hsl(220, 9%, 67%);
+
+        .author-title {
+            h4 {
+                color: $verydarkgrayishblue;
+            }
+            h5 {
+                color: $darkgray;
+            }
         }
+    }
+
+    .description {
+        color: $darkergray;
     }
 }
 
@@ -214,13 +246,23 @@ body {
         grid-column: span 1;
     }
 
-    .author .author-title {
-        h4 {
-            color: white;
+    .author {
+        img {
+            border-color: white;
         }
-        h5 {
-            color: hsl(220, 9%, 67%);
+
+        .author-title {
+            h4 {
+                color: white;
+            }
+            h5 {
+                color: $darkgray;
+            }
         }
+    }
+
+    .description {
+        color: $darkgray;
     }
 }
 
