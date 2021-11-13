@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/sass-grid-CIieqvIL6)
 - Live Site URL: [GitHub Pages](https://pepper99.github.io/testimonials-grid-section/index.html)
 
 ## Built with
